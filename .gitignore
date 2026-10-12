@@ -1,0 +1,4 @@
+agent/config.json
+agent/cache.json
+agent/*.log
+__pycache__/

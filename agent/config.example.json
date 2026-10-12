@@ -1,0 +1,9 @@
+{
+  "agent_id": "pc1",
+  "server_url": "https://TU-SITIO.com/obs/api.php",
+  "token": "el mismo AGENT_TOKEN de config.php",
+  "obs_host": "localhost",
+  "obs_port": 4455,
+  "obs_password": "clave de obs-websocket",
+  "obs_exe": "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe"
+}
