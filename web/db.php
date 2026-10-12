@@ -38,7 +38,7 @@ function install(PDO $pdo): void
         input_name VARCHAR(100) NOT NULL,
         start_at INT NOT NULL,
         end_at INT NOT NULL,
-        prestart_sec INT NOT NULL DEFAULT 300
+        prestart_sec INT NOT NULL DEFAULT 60
     ) CHARACTER SET utf8mb4');
     $pdo->exec('CREATE TABLE agents (
         agent_id VARCHAR(20) PRIMARY KEY,
@@ -60,7 +60,7 @@ function install(PDO $pdo): void
         msg VARCHAR(300) NOT NULL
     ) CHARACTER SET utf8mb4');
 
-    $seed = $pdo->prepare('INSERT INTO events(name,scene,input_name,start_at,end_at,prestart_sec) VALUES(?,?,?,?,?,300)');
+    $seed = $pdo->prepare('INSERT INTO events(name,scene,input_name,start_at,end_at,prestart_sec) VALUES(?,?,?,?,?,60)');
     foreach ([
         ['Miércoles', 'miercoles', '2026-10-14 10:45', '2026-10-14 17:30'],
         ['Jueves',    'jueves',    '2026-10-15 09:45', '2026-10-15 18:00'],
